@@ -14,7 +14,7 @@ NSString *const kLatitudeKey = @"latitude";
 NSString *const kLongitudeKey = @"longitude";
 NSString *const kOpenWeatherURL = @"http://api.openweathermap.org/data/2.5/weather";
 NSString *const kParamsOpenWeatherURL = @"%@?lat=%@&lon=%@&APPID=%@&units=metric";
-NSString *const kOpenWeatherApiKey = @"dedf681b27fda5923f86c5a111c49950";
+NSString *const kOpenWeatherApiKey = @"";
 NSString *const kMainKey = @"main";
 NSString *const kTempKey = @"temp";
 NSString *const kNameKey = @"name";
