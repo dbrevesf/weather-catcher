@@ -7,25 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A772ED88FF9CDA4ECF22BF6F /* libPods-WeatherCatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF255EB419FAD6ACC6E76BE7 /* libPods-WeatherCatcher.a */; };
+		B858265E1F4DFA5A00C5E193 /* ForecastService.m in Sources */ = {isa = PBXBuildFile; fileRef = B858265D1F4DFA5A00C5E193 /* ForecastService.m */; };
+		B85826621F4DFAA400C5E193 /* ForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85826611F4DFAA400C5E193 /* ForecastViewController.m */; };
+		B85826661F4DFFFB00C5E193 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B85826651F4DFFFB00C5E193 /* Constants.m */; };
+		B85826691F4E00EB00C5E193 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = B85826681F4E00EB00C5E193 /* LocationService.m */; };
 		B8C60F8D1F4DF506000764C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C60F8C1F4DF506000764C7 /* main.m */; };
 		B8C60F901F4DF506000764C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C60F8F1F4DF506000764C7 /* AppDelegate.m */; };
-		B8C60F931F4DF506000764C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C60F921F4DF506000764C7 /* ViewController.m */; };
 		B8C60F961F4DF506000764C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C60F941F4DF506000764C7 /* Main.storyboard */; };
 		B8C60F981F4DF506000764C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C60F971F4DF506000764C7 /* Assets.xcassets */; };
 		B8C60F9B1F4DF506000764C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C60F991F4DF506000764C7 /* LaunchScreen.storyboard */; };
+		B8C60FA41F4DF868000764C7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B8C60FA31F4DF868000764C7 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3BDC70729D1B8635CF7A8F /* Pods-WeatherCatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherCatcher/Pods-WeatherCatcher.debug.xcconfig"; sourceTree = "<group>"; };
+		773B721A184C15DC195691BC /* Pods-WeatherCatcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCatcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherCatcher/Pods-WeatherCatcher.release.xcconfig"; sourceTree = "<group>"; };
+		B858265C1F4DFA5A00C5E193 /* ForecastService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForecastService.h; path = Service/ForecastService.h; sourceTree = "<group>"; };
+		B858265D1F4DFA5A00C5E193 /* ForecastService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForecastService.m; path = Service/ForecastService.m; sourceTree = "<group>"; };
+		B85826601F4DFAA400C5E193 /* ForecastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForecastViewController.h; path = Controller/ForecastViewController.h; sourceTree = "<group>"; };
+		B85826611F4DFAA400C5E193 /* ForecastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForecastViewController.m; path = Controller/ForecastViewController.m; sourceTree = "<group>"; };
+		B85826641F4DFFFB00C5E193 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Supporting Files/Constants.h"; sourceTree = "<group>"; };
+		B85826651F4DFFFB00C5E193 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Supporting Files/Constants.m"; sourceTree = "<group>"; };
+		B85826671F4E00EB00C5E193 /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = Service/LocationService.h; sourceTree = "<group>"; };
+		B85826681F4E00EB00C5E193 /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationService.m; path = Service/LocationService.m; sourceTree = "<group>"; };
 		B8C60F881F4DF506000764C7 /* WeatherCatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherCatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C60F8C1F4DF506000764C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8C60F8E1F4DF506000764C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8C60F8F1F4DF506000764C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B8C60F911F4DF506000764C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B8C60F921F4DF506000764C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B8C60F951F4DF506000764C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8C60F971F4DF506000764C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8C60F9A1F4DF506000764C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C60F9C1F4DF506000764C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C60FA31F4DF868000764C7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		FF255EB419FAD6ACC6E76BE7 /* libPods-WeatherCatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherCatcher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +48,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A772ED88FF9CDA4ECF22BF6F /* libPods-WeatherCatcher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		209B2B1825A2BFCA696C6F59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3BDC70729D1B8635CF7A8F /* Pods-WeatherCatcher.debug.xcconfig */,
+				773B721A184C15DC195691BC /* Pods-WeatherCatcher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B858265B1F4DFA3400C5E193 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B858265C1F4DFA5A00C5E193 /* ForecastService.h */,
+				B858265D1F4DFA5A00C5E193 /* ForecastService.m */,
+				B85826671F4E00EB00C5E193 /* LocationService.h */,
+				B85826681F4E00EB00C5E193 /* LocationService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		B858265F1F4DFA7100C5E193 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B85826601F4DFAA400C5E193 /* ForecastViewController.h */,
+				B85826611F4DFAA400C5E193 /* ForecastViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B85826631F4DFAB800C5E193 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B8C60F991F4DF506000764C7 /* LaunchScreen.storyboard */,
+				B8C60F941F4DF506000764C7 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		B8C60F7F1F4DF506000764C7 = {
 			isa = PBXGroup;
 			children = (
+				B8C60FA31F4DF868000764C7 /* Podfile */,
 				B8C60F8A1F4DF506000764C7 /* WeatherCatcher */,
 				B8C60F891F4DF506000764C7 /* Products */,
+				209B2B1825A2BFCA696C6F59 /* Pods */,
+				EBBA0AA337D949F0A2195BB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +115,12 @@
 		B8C60F8A1F4DF506000764C7 /* WeatherCatcher */ = {
 			isa = PBXGroup;
 			children = (
+				B85826631F4DFAB800C5E193 /* Storyboard */,
+				B858265F1F4DFA7100C5E193 /* Controller */,
+				B858265B1F4DFA3400C5E193 /* Service */,
 				B8C60F8E1F4DF506000764C7 /* AppDelegate.h */,
 				B8C60F8F1F4DF506000764C7 /* AppDelegate.m */,
-				B8C60F911F4DF506000764C7 /* ViewController.h */,
-				B8C60F921F4DF506000764C7 /* ViewController.m */,
-				B8C60F941F4DF506000764C7 /* Main.storyboard */,
 				B8C60F971F4DF506000764C7 /* Assets.xcassets */,
-				B8C60F991F4DF506000764C7 /* LaunchScreen.storyboard */,
 				B8C60F9C1F4DF506000764C7 /* Info.plist */,
 				B8C60F8B1F4DF506000764C7 /* Supporting Files */,
 			);
@@ -75,8 +131,18 @@
 			isa = PBXGroup;
 			children = (
 				B8C60F8C1F4DF506000764C7 /* main.m */,
+				B85826641F4DFFFB00C5E193 /* Constants.h */,
+				B85826651F4DFFFB00C5E193 /* Constants.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBBA0AA337D949F0A2195BB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF255EB419FAD6ACC6E76BE7 /* libPods-WeatherCatcher.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8C60F9F1F4DF506000764C7 /* Build configuration list for PBXNativeTarget "WeatherCatcher" */;
 			buildPhases = (
+				4ECD9BFDEE5D6FF186446E83 /* [CP] Check Pods Manifest.lock */,
 				B8C60F841F4DF506000764C7 /* Sources */,
 				B8C60F851F4DF506000764C7 /* Frameworks */,
 				B8C60F861F4DF506000764C7 /* Resources */,
+				E095C2AC3B86CEA8AA93F926 /* [CP] Embed Pods Frameworks */,
+				C556E2FEABA7153EB1F3AFD1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,7 +179,7 @@
 				TargetAttributes = {
 					B8C60F871F4DF506000764C7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -139,19 +208,71 @@
 			files = (
 				B8C60F9B1F4DF506000764C7 /* LaunchScreen.storyboard in Resources */,
 				B8C60F981F4DF506000764C7 /* Assets.xcassets in Resources */,
+				B8C60FA41F4DF868000764C7 /* Podfile in Resources */,
 				B8C60F961F4DF506000764C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ECD9BFDEE5D6FF186446E83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C556E2FEABA7153EB1F3AFD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherCatcher/Pods-WeatherCatcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E095C2AC3B86CEA8AA93F926 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherCatcher/Pods-WeatherCatcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8C60F841F4DF506000764C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8C60F931F4DF506000764C7 /* ViewController.m in Sources */,
+				B85826661F4DFFFB00C5E193 /* Constants.m in Sources */,
+				B85826621F4DFAA400C5E193 /* ForecastViewController.m in Sources */,
+				B858265E1F4DFA5A00C5E193 /* ForecastService.m in Sources */,
 				B8C60F901F4DF506000764C7 /* AppDelegate.m in Sources */,
+				B85826691F4E00EB00C5E193 /* LocationService.m in Sources */,
 				B8C60F8D1F4DF506000764C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,23 +391,29 @@
 		};
 		B8C60FA01F4DF506000764C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3BDC70729D1B8635CF7A8F /* Pods-WeatherCatcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeatherCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.breves.WeatherCatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		B8C60FA11F4DF506000764C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773B721A184C15DC195691BC /* Pods-WeatherCatcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeatherCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.breves.WeatherCatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -309,6 +436,7 @@
 				B8C60FA11F4DF506000764C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
