@@ -9,13 +9,6 @@
 #import "ForecastViewController.h"
 #import "ForecastService.h"
 
-static CGFloat const kCardCornerRadius = 4.0f;
-static CGFloat const kCardShadowRadius = 2.0f;
-static CGFloat const kCardShadowOpacity = 2.0f;
-static CGFloat const kCardShadowOffsetX = 0;
-static CGFloat const kCardShadowOffsetY = 1;
-static CGFloat const kAnimationDuration = 0.5f;
-
 @interface ForecastViewController ()
 
 @end
@@ -23,17 +16,22 @@ static CGFloat const kAnimationDuration = 0.5f;
 @implementation ForecastViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self adjustButtonLayout];
     [self callForecast];
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+/* This method calls the service to obtain the temperature based on the user's location.
+ * Besides that, it hides all the UI components and shows an activiry indicator which
+ * works as a working feedback to the user. After the service ends, the componets are shown
+ * again.
+ */
 - (void)callForecast {
     
     [self hideLabels];
@@ -44,21 +42,28 @@ static CGFloat const kAnimationDuration = 0.5f;
         [self.activityIndicator stopAnimating];
         [self showLabels];
     } Error:^(NSInteger response) {
-        NSLog(@"%ld", (long)response);
         [self.activityIndicator stopAnimating];
         self.errorMessage.alpha = 1;
+        self.refreshButton.alpha = 1;
     }];
 }
 
+/* This method set the values to the labels. It receives a NSDictionary as a parameter
+ * containing all the forecast data from the service. Then, it obtain the specific data
+ * and put it in the determined label.
+ */
 - (void)setValuesToLabels:(NSDictionary *)forecastData {
     
-    NSNumber *temperature = [[forecastData objectForKey:@"main"] objectForKey:@"temp"];
+    NSNumber *temperature = [[forecastData objectForKey:kMainKey] objectForKey:kTempKey];
     [self setBackgroundImageByTemperature:temperature];
-    self.temperatureLabel.text = [NSString stringWithFormat:@"%ld °C",[temperature integerValue]];
-    self.cityNameLabel.text = [forecastData objectForKey:@"name"];
-    self.countryNameLabel.text = [[forecastData objectForKey:@"sys"] objectForKey:@"country"];
+    self.temperatureLabel.text = [NSString stringWithFormat:@"%ld °C",(long)[temperature integerValue]];
+    self.cityNameLabel.text = [forecastData objectForKey:kNameKey];
+    self.countryNameLabel.text = [[forecastData objectForKey:kSysKey] objectForKey:kCountryKey];
 }
 
+/* This method hides the labels and it's called when the forecast service is running in order 
+ * to show the activity indicator.
+ */
 - (void)hideLabels {
     
     self.countryNameLabel.alpha = 0;
@@ -68,6 +73,9 @@ static CGFloat const kAnimationDuration = 0.5f;
     self.errorMessage.alpha = 0;
 }
 
+/* This method shows the labels after the service is finished. It's shown with animation 
+ * so the transition between a request becomes more visually enjoyable.
+ */
 - (void)showLabels {
     
     [UIView animateWithDuration:kAnimationDuration animations:^{
@@ -78,6 +86,10 @@ static CGFloat const kAnimationDuration = 0.5f;
     }];
 }
 
+/* This method changes the background color according to the temperature. It was made to turn the
+ * temperature changes more visible to the user. Not only the temperature value changes. The 
+ * background color changes as well.
+ */
 - (void)setBackgroundImageByTemperature:(NSNumber *)temperature {
     
     CGFloat floatTemperature = [temperature floatValue];
@@ -98,6 +110,8 @@ static CGFloat const kAnimationDuration = 0.5f;
     self.view.backgroundColor = backgroundColor;
 }
 
+/* This method sets the shadow and the corner to the refresh button.
+ */
 - (void)adjustButtonLayout {
     
     self.refreshButton.layer.cornerRadius = kCardCornerRadius;
@@ -108,19 +122,12 @@ static CGFloat const kAnimationDuration = 0.5f;
     self.refreshButton.layer.shadowOpacity = kCardShadowOpacity;
 }
 
+
+/* This method calls the forecast service to refresh the temperature value
+ */
 - (IBAction)refreshForecast:(id)sender {
     
     [self callForecast];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -10,6 +10,8 @@
 
 @implementation LocationService
 
+/* This method gets the current user's location
+ */
 - (NSDictionary *)getCurrentLocation {
     
     CLLocationManager *locationManager = [CLLocationManager new];

@@ -10,13 +10,16 @@
 
 @implementation ForecastService
 
+/* This method realizes the request to the OpenWeather service in order to obtain the temperature 
+ * according to the user's location.
+ */
 - (void)getCurrentForecastSuccess:(ForecastServiceSuccess)success Error:(ForecastServiceError)error{
     
     LocationService *locationService = [LocationService new];
     NSDictionary *location = [locationService getCurrentLocation];
     NSNumber *latitude = [location objectForKey:kLatitudeKey];
     NSNumber *longitude = [location objectForKey:kLongitudeKey];
-    NSString *openWeatherUrlWithParams = [NSString stringWithFormat:@"%@?lat=%@&lon=%@&APPID=%@&units=metric", kOpenWeatherURL, latitude, longitude, kOpenWeatherApiKey];
+    NSString *openWeatherUrlWithParams = [NSString stringWithFormat:kParamsOpenWeatherURL, kOpenWeatherURL, latitude, longitude, kOpenWeatherApiKey];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:openWeatherUrlWithParams parameters:nil progress:nil
          success:^(NSURLSessionTask *task, id responseObject) {

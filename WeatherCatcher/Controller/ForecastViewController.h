@@ -10,8 +10,6 @@
 
 @interface ForecastViewController : UIViewController
 
-@property (assign, nonatomic) NSString *temperature;
-@property (assign, nonatomic) NSString *locationName;
 @property (weak, nonatomic) IBOutlet UILabel *countryNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
