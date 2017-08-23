@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *errorMessage;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
 @end

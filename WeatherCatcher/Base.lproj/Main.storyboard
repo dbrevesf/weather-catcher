@@ -21,18 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campinas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9X-XE-lqn">
-                                <rect key="frame" x="0.0" y="190" width="375" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brazil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-fE-t41">
+                                <rect key="frame" x="0.0" y="70" width="375" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-pQ-SL5">
-                                <rect key="frame" x="107" y="293" width="160" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-pQ-SL5">
+                                <rect key="frame" x="107" y="292" width="161.5" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FFV-Qe-rWx">
@@ -44,20 +42,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brazil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-fE-t41">
-                                <rect key="frame" x="0.0" y="70" width="375" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campinas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9X-XE-lqn">
+                                <rect key="frame" x="0.0" y="166" width="375" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fam-HI-z5T">
+                                <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CLr-vK-FoP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="refresh">
+                                    <color key="titleColor" red="0.4188808692893401" green="0.4188808692893401" blue="0.4188808692893401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.1450980392" green="0.1333333333" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshForecast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghf-aa-iEx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fam-HI-z5T" secondAttribute="trailing" constant="20" id="82E-9h-2IV"/>
+                            <constraint firstItem="cp2-pQ-SL5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GEl-gb-WKy"/>
+                            <constraint firstItem="cp2-pQ-SL5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ip4-6Y-Kxy"/>
+                            <constraint firstItem="m9X-XE-lqn" firstAttribute="top" secondItem="0yz-fE-t41" secondAttribute="bottom" constant="60" id="LW8-fE-shM"/>
                             <constraint firstItem="FFV-Qe-rWx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OxY-Dj-hYX"/>
                             <constraint firstItem="nHP-Bc-d6v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RhU-Os-A6l"/>
+                            <constraint firstItem="m9X-XE-lqn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xmu-9b-xI9"/>
+                            <constraint firstItem="0yz-fE-t41" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Z4Y-WP-4E4"/>
+                            <constraint firstItem="fam-HI-z5T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ZTc-ub-u9X"/>
+                            <constraint firstAttribute="trailing" secondItem="0yz-fE-t41" secondAttribute="trailing" id="ZqB-RV-xsG"/>
+                            <constraint firstItem="0yz-fE-t41" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ctH-2z-GZ6"/>
                             <constraint firstItem="FFV-Qe-rWx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ekj-BW-wMX"/>
+                            <constraint firstAttribute="trailing" secondItem="m9X-XE-lqn" secondAttribute="trailing" id="sBw-h7-eJW"/>
                             <constraint firstItem="nHP-Bc-d6v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="smD-m7-1mH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fam-HI-z5T" secondAttribute="bottom" constant="20" id="yX8-xI-Ipo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -65,6 +88,7 @@
                         <outlet property="cityNameLabel" destination="m9X-XE-lqn" id="NMW-IL-XWL"/>
                         <outlet property="countryNameLabel" destination="0yz-fE-t41" id="qBt-NA-cE8"/>
                         <outlet property="errorMessage" destination="nHP-Bc-d6v" id="Idg-Vr-49F"/>
+                        <outlet property="refreshButton" destination="fam-HI-z5T" id="8ui-Xw-Sad"/>
                         <outlet property="temperatureLabel" destination="cp2-pQ-SL5" id="of6-xA-dfg"/>
                     </connections>
                 </viewController>
